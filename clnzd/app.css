@@ -1,0 +1,62 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  text-align: center;
+}
+#container {
+  background-color: #003049;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  border: 5px solid #003049;
+  /* Flexbox options default is flex row withing flex direction with flex enabled it will staywithin the container element others are row-reverse column column-reverse goes along the left and right axis*/
+  display: flex;
+  flex-direction: row;
+  /* Determains how content is distrubuted across main axis depending on flex direction */
+  justify-content: center;
+  /* Flex Wrap wraps the content along the element wrap, nowrap, and wrap-reverse*/
+  /* flex-wrap: wrap; */
+  /* Aligns the element along the cross axis  */
+  /* align-items: flex-start; */
+
+  /* Align Content used to controll space along the content only really works when wrap is enabled "Align-self is applied to a single element"*/
+  /* align-content: center; */
+}
+#container div {
+  width: 200px;
+  height: 200px;
+  /* text-align: center; */
+  flex-basis: 200px;
+}
+/* Flex grow allows the element to fill in the remaining amount of space the number giving is the porportion that the item will take up the higher the number the more it takes up a min and max can be set in the parent flex shrink determains the rate the item will shrink the higher the number the faster it will a flex shrink of 0 wont shrink at all*/
+
+div:nth-last-of-type(5) {
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+
+/* Align-self examples */
+/* div:nth-of-type(2) {
+  align-self: center;
+}
+div:nth-of-type(3) {
+  align-self: flex-end;
+} */
+
+/* Shrot hand flex grow shrink and basis */
+main {
+  width: 80%;
+  margin: 0 auto;
+  border: 5px solid black;
+  height: 500px;
+  display: flex;
+}
+main .maincontent {
+  background-color: #80ffdb;
+  flex: 2 1 800px;
+}
+main .sidebar {
+  background-color: #6930c3;
+  flex: 1 2 300px;
+}
